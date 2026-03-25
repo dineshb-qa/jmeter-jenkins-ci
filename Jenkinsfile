@@ -6,14 +6,14 @@ pipeline {
     }
     stage('JMeter') {
       steps {
-        bat ```
+        bat '''
             if exist logs rmdir /s/q logs
             if exist html rmdir /s/q html
             mkdir logs
             mkdir html
             mkdir html\\report
             jmeter -n -t "\\scripts\\Test Plan for API Load.jmx" -l log/results.jtl -e -o html/report
-        ```
+        '''
       }
     }
     stage('Reports') {
