@@ -7,12 +7,12 @@ pipeline {
     stage('JMeter') {
       steps {
         bat '''
-            if exist logs rmdir /s/q logs
-            if exist html rmdir /s/q html
+            if exist logs rmdir /s /q logs
+            if exist html rmdir /s /q html
             mkdir logs
             mkdir html
             mkdir html\\report
-            "D:\\JMeter\\apache-jmeter-5.5\\bin\\jmeter.bat" -n -t "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\jmeter-browser-ci\\scripts\\Test Plan for API Load.jmx" -l log/results.jtl -e -o html/report
+            "D:\\JMeter\\apache-jmeter-5.5\\bin\\jmeter.bat" -n -t "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\jmeter-browser-ci\\scripts\\Test Plan for API Load.jmx" -l logs/results.jtl -e -o html/report
         '''
       }
     }
