@@ -12,7 +12,7 @@ pipeline {
             mkdir logs
             mkdir html
             mkdir html\\report
-            jmeter -n -t "\\scripts\\Test Plan for API Load.jmx" -l log/results.jtl -e -o html/report
+            "D:\\JMeter\\apache-jmeter-5.5\\bin\\jmeter.bat" -n -t "\\scripts\\Test Plan for API Load.jmx" -l log/results.jtl -e -o html/report
         '''
       }
     }
