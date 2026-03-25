@@ -26,7 +26,7 @@ pipeline {
           relativeFailedThresholdPositive: 1.3,
           relativeUnstableThresholdPositive: 1.2,
           modeOfThreshold: true,
-          configType: 'ART'
+          //configType: 'ART'
         )
       }
     }
