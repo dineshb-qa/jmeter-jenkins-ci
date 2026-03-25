@@ -24,7 +24,7 @@ pipeline {
           errorUnstableThreshold: 0.0,
           // Double numbers (no quotes)
           relativeFailedThresholdPositive: 1.3,
-          relatedUnstableThresholdPositive: 1.2,
+          relativeUnstableThresholdPositive: 1.2,
           modeOfThreshold: true,
           configType: 'ART'
         )
