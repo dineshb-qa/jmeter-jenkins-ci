@@ -19,7 +19,7 @@ pipeline {
     stage('Performance Gates') {
       steps {
         perfReport (
-          sourceDateFiles: 'los/results.jtl',
+          sourceDataFiles: 'logs/results.jtl',
           errorFailedThreshold: 1.0,
           errorUnstableThreshold: 0.0,
           // Double numbers (no quotes)
