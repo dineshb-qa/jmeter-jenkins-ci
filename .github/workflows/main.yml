@@ -31,7 +31,7 @@ jobs:
         uses: QAInsights/PerfAction@v5.6.3
         with:
           # JMeter test plan to execute
-          test-plan-path: "./scripts/Test Plan for API Load.jmx"
+          test-plan-path: './scripts/Test_Plan_for_API_Load.jmx'
           args: "-e -o ./reports/html/"
 
       - name: Upload Results
